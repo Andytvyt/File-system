@@ -20,7 +20,7 @@ class System{
         // Module Xoa
 
         //Module Tim kiem
-
+        vector<Node*> searchDFS(Node* start, const string& keyword);
         // Module interface
         void run(); // tui để trong system.cpp, Bắc Sơn muốn dời đi đâu thì dời nha
 };
