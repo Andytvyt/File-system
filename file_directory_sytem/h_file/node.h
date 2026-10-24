@@ -10,6 +10,7 @@ class Node {
         string name;
         Node* parent;
         string getPath();
+        virtual ~Node() {}
         Node();
         Node(string name);
         Node(string name, Node* parent);
