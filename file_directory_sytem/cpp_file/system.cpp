@@ -1,4 +1,7 @@
 #include "..\h_file\system.h"
+#include <cctype>
+#include <string>
+#include <vector>
 
 void System::run(){
     while(this->running){
