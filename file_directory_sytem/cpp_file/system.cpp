@@ -20,22 +20,6 @@ bool hasControlCharacter(const string& value)
     return false;
 }
 
-bool isReservedDeviceName(const string& component)
-{
-
-    string base = component.substr(0, component.find('.'));
-    for (char& ch : base) ch = static_cast<char>(toupper(static_cast<unsigned char>(ch)));
-
-    if (base == "CON" || base == "PRN" || base == "AUX" || base == "NUL")
-        return true;
-
-    if (base.size() == 4 &&
-        (base.compare(0, 3, "COM") == 0 || base.compare(0, 3, "LPT") == 0) &&
-        base[3] >= '1' && base[3] <= '9')
-        return true;
-
-    return false;
-}
 
 bool isValidComponent(const string& component)
 {
@@ -45,7 +29,6 @@ bool isValidComponent(const string& component)
 
     const string forbidden = "<>:\"|?*/\\";
     if (component.find_first_of(forbidden) != string::npos) return false;
-    if (isReservedDeviceName(component)) return false;
     return true;
 }
 
