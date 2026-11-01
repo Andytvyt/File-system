@@ -99,6 +99,7 @@ bool normalizeRootPrefix(vector<string>& parts)
 
 } // namespace
 
+// Everything in this section is mostly for naming validations - feel free to adjust 
 
 
 Directory* System::resolveDirectoryPath(const string& path)
