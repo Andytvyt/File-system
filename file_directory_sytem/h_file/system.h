@@ -6,8 +6,10 @@
 class System{
     //Bien cua class, thich them gi thi them
     public:
-        bool running = true;
-        Directory RootDirectory("Root");
+		Directory RootDirectory;
+		System() {
+			RootDirectory.name = "Root";
+		}
 
         //Path handling, method getPath() của class File và Directory trả về full path của nó
         bool isValidPath(const string& path);
