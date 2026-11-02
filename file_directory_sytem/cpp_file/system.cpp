@@ -3,11 +3,6 @@
 #include <string>
 #include <vector>
 
-void System::run(){
-    while(this->running){
-    // Main loop
-    };
-}
 
 namespace {
 
